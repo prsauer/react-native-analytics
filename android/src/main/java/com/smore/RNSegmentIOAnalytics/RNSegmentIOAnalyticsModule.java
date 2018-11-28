@@ -41,6 +41,7 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
     if (mAnalytics == null) {
       Context context = getReactApplicationContext().getApplicationContext();
       Builder builder = new Analytics.Builder(context, writeKey);
+      builder.trackApplicationLifecycleEvents();
       builder.flushQueueSize(flushAt);
 
       if (mDebug) {
