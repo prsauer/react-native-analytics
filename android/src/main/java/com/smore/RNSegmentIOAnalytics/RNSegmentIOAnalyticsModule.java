@@ -49,6 +49,7 @@ public class RNSegmentIOAnalyticsModule extends ReactContextBaseJavaModule {
       }
 
       mAnalytics = builder.build();
+      Analytics.setSingletonInstance(mAnalytics);
     } else {
       log("Segment Analytics already initialized. Refusing to re-initialize.");
     }
